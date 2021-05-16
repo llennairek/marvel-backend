@@ -23,8 +23,6 @@ router.get("/", async (req, res) => {
   try {
     //API request
     const response = await axios.get(encodeURI(url));
-    console.log("url :  ", encodeURI(url));
-    console.log("response :     ", response.data);
     res.status(200).json(response.data);
   } catch (error) {
     res.status(400).json({ error: error.message });
