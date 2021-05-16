@@ -19,7 +19,7 @@ app.use("/characters", charactersRoute);
 app.use("/user", userRoute);
 
 //Database config and connection
-mongoose.connect("mongodb://localhost/marvel", {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
