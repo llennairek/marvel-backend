@@ -8,6 +8,7 @@ require("dotenv").config();
 //routes imports
 const comicsRoute = require("./routes/comics");
 const charactersRoute = require("./routes/characters");
+const userRoute = require("./routes/user");
 
 //initialize express and add middlewares
 const app = express();
@@ -15,6 +16,7 @@ app.use(cors());
 app.use(formidable());
 app.use("/comics", comicsRoute);
 app.use("/characters", charactersRoute);
+app.use("/user", userRoute);
 
 //Database config and connection
 mongoose.connect("mongodb://localhost/marvel", {

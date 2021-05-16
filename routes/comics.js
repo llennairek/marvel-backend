@@ -18,12 +18,17 @@ router.get("/:id", async (req, res) => {
 
 router.get("/", async (req, res) => {
   //recept query strings
-  const { page, title } = req.query;
-  //decalre URL
+  let { page, title } = req.query;
+  //declare URL
   let url = `https://lereacteur-marvel-api.herokuapp.com/comics?apiKey=${process.env.API_KEY}`;
 
+  //the api doesnt work with parenthesis in title
+  if (title.indexOf("(") !== -1) {
+    title = title.substring(0, title.indexOf("("));
+  }
+
   const limit = 100;
-  const skip = (page - 1) * 100;
+  const skip = (page - 1) * limit;
 
   //construct request URL
   title && (url += "&title=" + title);
