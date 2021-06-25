@@ -15,7 +15,7 @@ If you want to see some screenshots of the website please go on the frontend rep
 
 ## 📃 Tasks
 
-✔️ Create a server NodeJs & Express from scracth  
+✔️ Create a server NodeJs & Express from scratch  
 ✔️ Create routes  
 ✔️ Create Models  
 ✔️ Atuhentication    
