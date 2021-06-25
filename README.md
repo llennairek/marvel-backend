@@ -18,7 +18,7 @@ If you want to see some screenshots of the website please go on the frontend rep
 ✔️ Create a server NodeJs & Express from scratch  
 ✔️ Create routes  
 ✔️ Create Models  
-✔️ Atuhentication    
+✔️ Authentication    
 ✔️ Interact with Marvel API  
 ✔️ Deploy on Heroku  
 
